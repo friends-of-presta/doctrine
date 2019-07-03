@@ -1,0 +1,27 @@
+services:
+  doctrine_demo.grid_definition_factory:
+    class: FOP\Doctrine\Grid\DemoDefinitionFactory
+    parent: 'prestashop.core.grid.definition.factory.abstract_grid_definition'
+    public: true
+
+  doctrine_demo.grid_query_builder:
+    class: FOP\Doctrine\Grid\DemoQueryBuilder
+    arguments:
+      - '@doctrine.dbal.default_connection'
+      - '%database_prefix%'
+
+  doctrine_demo.grid_data_factory:
+    class: 'PrestaShop\PrestaShop\Core\Grid\Data\Factory\DoctrineGridDataFactory'
+    arguments:
+      - '@doctrine_demo.grid_query_builder'
+      - '@prestashop.core.hook.dispatcher'
+      - '@prestashop.core.grid.query.doctrine_query_parser'
+      - 'demo_entity'
+
+  doctrine_demo.grid_factory:
+    class: 'PrestaShop\PrestaShop\Core\Grid\GridFactory'
+    arguments:
+      - '@doctrine_demo.grid_definition_factory'
+      - '@doctrine_demo.grid_data_factory'
+      - '@prestashop.core.grid.filter.form_factory'
+      - '@prestashop.core.hook.dispatcher'

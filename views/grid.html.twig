@@ -1,0 +1,16 @@
+{% extends '@!PrestaShop/Admin/layout.html.twig' %}
+
+{% block content %}
+  <div class="row">
+    <div class="col">
+      {% include '@PrestaShop/Admin/Common/Grid/grid_panel.html.twig' with {'grid': demoGrid} %}
+    </div>
+  </div>
+{% endblock %}
+
+{% block javascripts %}
+  {{ parent() }}
+
+  <script src="{{ asset('../modules/training/public/build/admin/demo/index.js') }}"></script>
+{% endblock %}
+

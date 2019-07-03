@@ -1,0 +1,14 @@
+{
+  "name": "prestashop/doctrine",
+  "description": "A module demonstrating Doctrine ORM support in PrestaShop 1.7.6",
+  "autoload": {
+    "psr-4": {
+      "FOP\\Doctrine\\": "src/"
+    }
+  },
+  "license": "MIT",
+  "type": "prestashop-module",
+  "require": {
+    "php": ">=7.1"
+  }
+}

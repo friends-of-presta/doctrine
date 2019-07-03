@@ -1,0 +1,6 @@
+doctrine_routes:
+  # loads routes from the PHP annotations of the controllers found in that directory
+  resource: '../src/Controller/'
+  type:     annotation
+  prefix: /doctrine
+
