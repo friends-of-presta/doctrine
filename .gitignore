@@ -1,1 +1,4 @@
 vendor
+public
+node_modules
+!public/.gitkeep

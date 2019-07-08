@@ -1,7 +1,8 @@
 {% extends '@!PrestaShop/Admin/layout.html.twig' %}
 {% form_theme demoForm 'bootstrap_4_horizontal_layout.html.twig' %}
-
 {% block content %}
-  <h1>Demo rendering page</h1>
-  {{ form(demoForm) }}
+  <div class="col col-sm-6 col-md-6">
+    <h1>Demo rendering page</h1>
+    {{ form(demoForm) }}
+  </div>
 {% endblock %}
