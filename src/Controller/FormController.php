@@ -11,7 +11,10 @@ use FOP\Doctrine\Form\DemoFormType;
 final class FormController extends FrameworkBundleAdminController
 {
     /**
-     * @Route("/form", methods={"GET", "POST"}, name="doctrine_demo_form")
+     * @Route("/form", methods={"GET", "POST"}, name="doctrine_demo_form", defaults={
+     *     "_legacy_controller": "AdminDoctrineFormClass",
+     *     "_legacy_link": "AdminDoctrineFormClass"
+     *     })
      */
     public function renderForm(Request $request)
     {

@@ -10,10 +10,12 @@ use Symfony\Component\Routing\Annotation\Route;
 final class GridController extends FrameworkBundleAdminController
 {
     /**
-     * @Route("/grid", methods={"GET", "POST"}, name="doctrine_demo_grid")
+     * @Route("/grid", methods={"GET", "POST"}, name="doctrine_demo_grid", defaults={
+     *     "_legacy_controller": "AdminDoctrineGridClass",
+     *     "_legacy_link": "AdminDoctrineGridClass"
+     *     })
      *
      * @param DemoFilters $filters
-     * @param GridFactoryInterface $gridFactory
      *
      * @return Response
      */
