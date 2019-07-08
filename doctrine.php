@@ -38,8 +38,6 @@ class Doctrine extends Module
             'CREATE TABLE ' . _DB_PREFIX_ . 'demo_entity (id INT AUTO_INCREMENT NOT NULL, isbn VARCHAR(13) NOT NULL, expiration_date DATE NOT NULL, alternative_description LONGTEXT NOT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE = InnoDB'
         );
 
-        Tools::clearSf2Cache();
-
         return true;
     }
 
@@ -51,7 +49,6 @@ class Doctrine extends Module
         parent::uninstall();
 
         Db::getInstance()->execute('DROP TABLE ' . _DB_PREFIX_ . 'demo_entity');
-        Tools::clearSf2Cache();
 
         return true;
     }
