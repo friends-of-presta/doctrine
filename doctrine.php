@@ -18,11 +18,10 @@ class Doctrine extends Module
         $this->author = 'Mickaël Andrieu';
         $this->need_instance = 0;
 
-        // to uncomment after the stable release
-        /*$this->ps_versions_compliancy = [
+        $this->ps_versions_compliancy = [
             'min' => '1.7.6.0',
             'max' => _PS_VERSION_,
-        ];*/
+        ];
 
         parent::__construct();
 
