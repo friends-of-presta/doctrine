@@ -8,7 +8,7 @@ class Doctrine extends Module
 {
     /**
      * In constructor we define our module's meta data.
-     * It's better tot keep constructor (and main module class itself) as thin as possible
+     * It's better to keep constructor (and main module class itself) as thin as possible
      * and do any processing in dedicated classes.
      */
     public function __construct()
@@ -25,7 +25,7 @@ class Doctrine extends Module
 
         parent::__construct();
 
-        $this->displayName = 'Doctrine exemple module';
+        $this->displayName = 'Doctrine example module';
     }
 
     /**
